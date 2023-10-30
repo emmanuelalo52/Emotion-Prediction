@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this project, we aimed to predict emotions in scenes from the TV series "Friends" using a DistilBERT transformer. The dataset consists of labeled emotions, including sadness, joy, surprise, and other emotions. This markdown file provides an overview of the project, including the dataset, the model used, and the results.
+In this project, we aimed to predict emotions in scenes from the TV series "Friends" using a DistilBERT transformer. The dataset, retrieved from the Hugging Face Model Hub, consists of labeled emotions, including sadness, joy, surprise, and other emotions. This markdown file provides an overview of the project, including the dataset, the model used, and the results.
 
 ## Dataset
 
@@ -12,7 +12,7 @@ The dataset used in this project is a collection of scenes from the TV series "F
 - Surprise
 - Other emotions (any emotion not categorized as the above three)
 
-The dataset includes both textual data from the script and additional features such as scene description, characters involved, and location. The labeled emotions allow for supervised training of the model.
+The dataset, retrieved from the Hugging Face Model Hub, includes both textual data from the script and additional features such as scene description, characters involved, and location. The labeled emotions allow for supervised training of the model.
 
 ## DistilBERT Transformer
 
@@ -40,14 +40,10 @@ The DistilBERT model was fine-tuned on the preprocessed "Friends" dataset. Fine-
 The trained and fine-tuned DistilBERT model achieved the following results:
 
 - Accuracy: 0.63%
-- F1-Score: 0.84
-- Precision: 0.86
-- Recall: 0.83
 
 The trained and fine-tuned DistilBERT model achieved the following results:
-- Accuracy: 0.91%
+- Accuracy: 91%
 - F1-Score: 0.91
-- Test loss: 0.22
 
 These results indicate that the fine-tuned model is proficient at predicting emotions in scenes from "Friends" with a reasonable degree of accuracy.
 
