@@ -1,52 +1,82 @@
-# Emotion Prediction on Friends Dataset
+Certainly! Here's a sample README (read.md) for the provided code:
 
-## Introduction
+---
 
-In this project, we aimed to predict emotions in scenes from the TV series "Friends" using a DistilBERT transformer. The dataset, retrieved from the Hugging Face Model Hub, consists of labeled emotions, including sadness, joy, surprise, and other emotions. This markdown file provides an overview of the project, including the dataset, the model used, and the results.
+# Text Analysis and Classification with Transformers
 
-## Dataset
+This repository contains a Python script that demonstrates various text analysis and classification tasks using the Hugging Face Transformers library. The code covers a wide range of tasks, including dataset loading, preprocessing, tokenization, model embeddings, dimensionality reduction, and text classification.
 
-The dataset used in this project is a collection of scenes from the TV series "Friends," labeled with different emotions. The emotions include:
-- Sadness
-- Joy
-- Surprise
-- Other emotions (any emotion not categorized as the above three)
+## Getting Started
 
-The dataset, retrieved from the Hugging Face Model Hub, includes both textual data from the script and additional features such as scene description, characters involved, and location. The labeled emotions allow for supervised training of the model.
+These instructions will help you set up and run the code on your local machine.
 
-## DistilBERT Transformer
+### Prerequisites
 
-### What is DistilBERT?
+Make sure you have the following libraries and tools installed:
 
-DistilBERT is a lighter and more efficient version of the BERT (Bidirectional Encoder Representations from Transformers) model. It retains most of BERT's performance while reducing its size. DistilBERT is a transformer-based model pre-trained on a massive corpus of text, making it capable of understanding context and semantic relationships in textual data.
+- Python 3.x
+- Hugging Face Transformers
+- PyTorch
+- scikit-learn
+- UMAP
+- Pandas
+- Matplotlib
+- NumPy
 
-### Why DistilBERT?
+You can install these libraries using pip:
 
-DistilBERT was chosen for this project due to its efficiency and good performance in natural language understanding tasks. Its smaller size allows for quicker training and inference while still delivering competitive results.
+```bash
+pip install transformers torch scikit-learn umap-learn pandas matplotlib numpy
+```
 
-## Data Preprocessing
+### Running the Code
 
-Before training the DistilBERT model, the dataset underwent several preprocessing steps, including:
-1. Tokenization: Splitting the text into individual words or subwords.
-2. Padding: Ensuring that all input sequences are of the same length by adding padding tokens.
-3. Encoding: Converting text into numerical values that can be fed into the model.
+1. Clone this repository to your local machine:
 
-## Model Training and Fine-Tuning
+```bash
+git clone https://github.com/your-username/transformers-text-analysis.git
+cd transformers-text-analysis
+```
 
-The DistilBERT model was fine-tuned on the preprocessed "Friends" dataset. Fine-tuning involves training the model on the labeled dataset, and it updates the model's weights to optimize its performance for emotion prediction in the specific context of the TV series "Friends."
+2. Run the Python script `text_analysis.py`:
 
-## Results
+```bash
+python text_analysis.py
+```
 
-The trained and fine-tuned DistilBERT model achieved the following results:
+The script will walk through various steps for text analysis, tokenization, embeddings, classification, and visualization.
 
-- Accuracy: 0.63%
+## Code Overview
 
-The trained and fine-tuned DistilBERT model achieved the following results:
-- Accuracy: 91%
-- F1-Score: 0.91
+Here's a brief overview of what the code does:
 
-These results indicate that the fine-tuned model is proficient at predicting emotions in scenes from "Friends" with a reasonable degree of accuracy.
+1. **Dataset Loading**:
+   - Imports necessary libraries.
+   - Lists available datasets from the Hugging Face hub.
+   - Loads the 'emotion' dataset.
 
-## Conclusion
+2. **Data Exploration**:
+   - Displays dataset information.
+   - Accesses and explores dataset columns and features.
+   - Converts the dataset to a Pandas DataFrame for better readability.
 
-In this project, we successfully used a fine-tuned DistilBERT transformer to predict emotions in scenes from the TV series "Friends." The model achieved an accuracy of 85% in distinguishing between sadness, joy, surprise, and other emotions. This demonstrates the potential of transformer-based models in natural language understanding and emotion prediction tasks.
+3. **Text Preprocessing**:
+   - Maps integer labels to their corresponding emotion names.
+   - Creates a bar chart to visualize the frequency of emotions.
+   - Adds a new column to count the number of words in each tweet and creates a boxplot to visualize word count distribution.
+
+4. **Text Tokenization and Encoding**:
+   - Tokenizes text using a pre-trained tokenizer.
+   - Converts tokens back to text.
+   - Extracts model input names and tokenizes the entire dataset.
+
+5. **Text Embeddings**:
+   - Loads a pre-trained model for text classification.
+   - Extracts hidden states for each text sample in the dataset.
+   - Performs dimensionality reduction using UMAP.
+   - Visualizes text embeddings using hexbin plots.
+
+6. **Text Classification**:
+   - Trains a logistic regression classifier and evaluates its accuracy.
+   - Computes the F1 score.
+   - Trains a Support Vector Machine (SVM) classifier and visualizes a confusion matrix.
