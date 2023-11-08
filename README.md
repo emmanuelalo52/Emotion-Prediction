@@ -4,7 +4,7 @@ Certainly! Here's a sample README (read.md) for the provided code:
 
 # Text Analysis and Classification with Transformers
 
-This repository contains a Python script that demonstrates various text analysis and classification tasks using the Hugging Face Transformers library. The code covers a wide range of tasks, including dataset loading, preprocessing, tokenization, model embeddings, dimensionality reduction, and text classification.
+Text analysis and classification tasks using the Hugging Face Transformers library. The code covers a wide range of tasks, including dataset loading, preprocessing, tokenization, model embeddings, dimensionality reduction, and text classification.
 
 ## Getting Started
 
