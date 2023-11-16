@@ -34,7 +34,7 @@ pip install transformers torch scikit-learn umap-learn pandas matplotlib numpy
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/transformers-text-analysis.git
+git clone https://github.com/emmanuelalo52/transformers-text-analysis.git
 cd transformers-text-analysis
 ```
 
